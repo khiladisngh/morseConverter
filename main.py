@@ -1,6 +1,8 @@
 import converter
 import textwrap as tw
 
+import sound
+
 morse_converter = converter.MorseConverter()
 
 title_text = tw.dedent(f"""
@@ -11,9 +13,10 @@ title_text = tw.dedent(f"""
 welcome_text = tw.dedent(f"""
     You may convert your sentence to morse code or vice versa.
     Press any other key to exit the tool.
-    Kindly choose an option below (A or B). 
+    Kindly choose an option below (A, B or C). 
     A: Convert Text to Morse Code.
     B: Convert Morse Code to Text.
+    C: Play Morse Sound.
     
     Enter your option: """)
 
@@ -34,6 +37,9 @@ if __name__ == '__main__':
             elif user_input.upper() == "B":
                 morse_converter.read_morse()
                 morse_converter.convert_to_text()
+            elif user_input.upper() == "C":
+                morse_converter.read_morse()
+                morse_converter.play_morse_sound()
             else:
                 running = False
                 break

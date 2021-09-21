@@ -1,7 +1,6 @@
 import json
-import time
-import winsound
 import textwrap as tw
+import sound
 
 
 class MorseConverter:
@@ -69,14 +68,4 @@ class MorseConverter:
         print(f"\nText version: \n{self.text}")
 
     def play_morse_sound(self):
-        """
-        Plays morse sound to the user.
-        """
-        for code in self.morse:
-            if code == ".":
-                winsound.Beep(frequency=700, duration=100)
-            if code == "-":
-                winsound.Beep(frequency=700, duration=400)
-            if code == " ":
-                time.sleep(0.2)
-
+        sound.play_morse_sound(self.morse)
