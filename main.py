@@ -1,8 +1,6 @@
 import converter
 import textwrap as tw
 
-import sound
-
 morse_converter = converter.MorseConverter()
 
 title_text = tw.dedent(f"""

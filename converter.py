@@ -37,7 +37,7 @@ class MorseConverter:
         self.morse = input(tw.dedent("""
         Enter morse code to convert:
         > Leave 1 space between letters.
-        > Leave 5 spaces between words.
+        > Leave 4 spaces between words.
         > """))
 
     def convert_to_morse(self):
